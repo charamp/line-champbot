@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = explode(' ', $event['message']['text']);
-			if ($text[0] == "แชมป์บอท") {
+			if (in_array("แชมป์บอท", $text)) {
 				$myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
 				fwrite($myfile, (string) $text[1]);
 				fclose($myfile);
