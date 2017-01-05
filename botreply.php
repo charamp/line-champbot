@@ -15,6 +15,7 @@ $myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
 fwrite($myfile, (string) $events);
 fclose($myfile);
 
+/*
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -28,6 +29,7 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+*/
 
 
 /*
