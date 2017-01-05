@@ -13,7 +13,7 @@ $events = json_decode($content, true);
 $text = $event['message']['text'];
 
 $myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
-fwrite($myfile, $text);
+fwrite($myfile, (string) $text);
 fclose($myfile);
 
 
