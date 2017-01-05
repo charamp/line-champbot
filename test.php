@@ -2,7 +2,7 @@
 
 function callApiChat($message) {
 	$url = 'http://www.dogdiri.com/chat/dogthink.php';
-	$data = array('chattext'=>'สวัสดี');
+	$data = array('chattext'=>$message);
 
 	// use key 'http' even if you send the request to https://...
 	$options = array(
@@ -19,7 +19,5 @@ function callApiChat($message) {
 	echo $result;
 	var_dump($result);
 }
-
-callApiChat("สวัสดี");
 
 ?>
