@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 				fclose($myfile);
 
 				$suffix = Array( str_repeat('5', rand(3,10)), str_repeat('อิ', rand(3,10)) );
-				$reply = callApiChat($text[1]) . $suffix[rand(0,1)];			
+				$reply = callApiChat($text[1]) . ' ' . $suffix[rand(0,1)];			
 				$replyToken = $event['source']['roomId'];
 				//$replyToken = $event['replyToken'];
 				$myfile = fopen("bbb.txt", "a") or die("Unable to open file!");
