@@ -1,3 +1,5 @@
+<?php
+
 $url = 'http://www.dogdiri.com/chat/dogthink.php';
 $data = array('chattext'=>'สวัสดี');
 
@@ -14,3 +16,5 @@ $result = file_get_contents($url, false, $context);
 if ($result === FALSE) { /* Handle error */ }
 
 var_dump($result);
+
+?>
