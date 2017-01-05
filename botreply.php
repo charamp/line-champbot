@@ -24,6 +24,10 @@ if (!is_null($events['events'])) {
 				fclose($myfile);
 
 				$reply = callApiChat($text[1]);			
+
+				$myfile = fopen("bbb.txt", "a") or die("Unable to open file!");
+                                fwrite($myfile, (string) $reply);
+                                fclose($myfile);
 	
 				$url = 'https://api.line.me/v2/bot/message/push';
          			$data = [
