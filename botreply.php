@@ -24,8 +24,8 @@ if (!is_null($events['events'])) {
 				fclose($myfile);
 
 				$reply = callApiChat($text[1]);			
-				//$replyToken = $event['source']['roomId'];
-				$replyToken = $event['replyToken'];
+				$replyToken = $event['source']['roomId'];
+				//$replyToken = $event['replyToken'];
 				$myfile = fopen("bbb.txt", "a") or die("Unable to open file!");
                                 fwrite($myfile, (string) $replyToken);
                                 fclose($myfile);
