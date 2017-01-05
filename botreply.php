@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 				fwrite($myfile, (string) $text[1]);
 				fclose($myfile);
 
-				$suffix = Array('5555', 'อิอิ');
+				$suffix = Array( str_repeat('5', rand(3,10)), str_repeat('อิ', rand(3,10)) );
 				$reply = callApiChat($text[1]) . $suffix[rand(0,1)];			
 				$replyToken = $event['source']['roomId'];
 				//$replyToken = $event['replyToken'];
