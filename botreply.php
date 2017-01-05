@@ -20,13 +20,8 @@ if (!is_null($events['events'])) {
 			$text = explode(' ', $event['message']['text']);
 			if ($text[0] == "แชมป์บอท") {
 				$myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
-				fwrite($myfile, (string) $text);
+				fwrite($myfile, (string) $text[1]);
 				fclose($myfile);
-			}
-			else {
-                                $myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
-                                fwrite($myfile, (string) $text);
-                                fclose($myfile);
 			}
 		}
 	}
