@@ -17,11 +17,12 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['message']['text'];
-			$myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
-			fwrite($myfile, (string) $text);
-			fclose($myfile);
-		}
+			$text = explode(' ', $event['message']['text']);
+			if ($text[0] == "แชมป์บอท") {
+				$myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
+				fwrite($myfile, (string) $text);
+				fclose($myfile);
+			}
 	}
 }
 
