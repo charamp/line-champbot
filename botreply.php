@@ -23,6 +23,11 @@ if (!is_null($events['events'])) {
 				fwrite($myfile, (string) $text);
 				fclose($myfile);
 			}
+			else {
+                                $myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
+                                fwrite($myfile, (string) $text);
+                                fclose($myfile);
+			}
 	}
 }
 
