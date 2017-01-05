@@ -2,10 +2,10 @@
 $lineAccessToken = 'JVQbtOi6+PdQ10mDBPi61vGacBf9xdi5Vs2vFYOSH8EdhfP01Ptv8CgotQAQbrsxQjXMluidNILBhu4raGdqcF+ne16E8bT6JvOliwseoYw8vqGjhXTK+T4yDYckXOoEfFkFp5MoBgEf6muvlwHp4gdB04t89/1O/w1cDnyilFU=';
 // Make a POST Request to Messaging API to reply to sender
 $access_token = $lineAccessToken;
-$lineTargetUID = "Re15307cef92d8a4e9fc5e566ed9bd140"; 
+$lineTargetUID = "C9e2a035e10bf19d8af5ae9eb88a5cebb"; 
 
 $replyToken = $lineTargetUID;
-$text  = isset($_POST['message'])?$_POST['message']:'ทดสอบๆ';
+$text  = isset($_POST['message'])?$_POST['message']:'';
 $messages = [
             'type' => 'text',
                      'text' => $text
