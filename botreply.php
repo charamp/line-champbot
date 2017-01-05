@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 
 				$suffix = Array( str_repeat('5', rand(3,10)), str_repeat('อิ', rand(1,2)) );
 
-				if (strpos($text[1], 'กินไรดี') !== FALSE) {
+				if (strpos($text[1], 'กิน') !== FALSE) {
 					$random = rand(0,7);
 					if ($random == 6 or $random == 7){
 						$reply = $food[$random];
