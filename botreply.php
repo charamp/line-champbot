@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 				$url = 'https://api.line.me/v2/bot/message/push';
          			$data = [
             					'to' => $replyToken,
-            					'messages' => [$reply]
+            					'messages' => [(string) $reply]
          				];
 
 		       		$post = json_encode($data);
@@ -50,7 +50,6 @@ if (!is_null($events['events'])) {
 				fwrite($myfile,(string) $text.' '.date(DATE_RFC2822)."\n");
 				fclose($myfile);
 			        echo $result . ', message: '.$text. "\r\n";
-
 
 			}
 		}
