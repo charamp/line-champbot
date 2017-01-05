@@ -28,11 +28,16 @@ if (!is_null($events['events'])) {
 				$myfile = fopen("bbb.txt", "a") or die("Unable to open file!");
                                 fwrite($myfile, (string) $reply);
                                 fclose($myfile);
+
+				$messages = [
+            				'type' => 'text',
+                     			'text' => $reply
+				];
 	
 				$url = 'https://api.line.me/v2/bot/message/push';
          			$data = [
             					'to' => $replyToken,
-            					'messages' => [(string) $reply]
+            					'messages' => [$message]
          				];
 
 		       		$post = json_encode($data);
