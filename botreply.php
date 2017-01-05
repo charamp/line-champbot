@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 				if (strpos($text[1], 'กินไรดี') !== FALSE) {
 					$random = rand(0,7);
 					if ($random == 6 or $random == 7){
-						$reply = $food[random];
+						$reply = $food[$random];
 					}
 					else {
 						$reply = 'เราว่ากิน' . $food[$random] . 'มะ ' . $suffixfood[rand(0,2)]; 
