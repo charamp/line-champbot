@@ -16,8 +16,7 @@ function callApiChat($message) {
 	$result = file_get_contents($url, false, $context);
 	if ($result === FALSE) { /* Handle error */ }
 
-	echo $result;
-	var_dump($result);
+	return $result;
 }
 
 ?>
