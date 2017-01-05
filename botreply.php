@@ -47,6 +47,10 @@ if (!is_null($events['events'])) {
 			        $result = curl_exec($ch);
 			        curl_close($ch);
 
+                                $myfile = fopen("ccc.txt", "a") or die("Unable to open file!");
+                                fwrite($myfile, (string) $text[1]);
+                                fclose($myfile);
+
 				fwrite($myfile,(string) $text.' '.date(DATE_RFC2822)."\n");
 				fclose($myfile);
 			        echo $result . ', message: '.$text. "\r\n";
