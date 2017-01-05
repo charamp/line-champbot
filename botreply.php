@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
 						$reply = $food[random];
 					}
 					else {
-						$reply = 'เราว่ากิน' . $food[0] . 'มะ ' . $suffixfood[rand(0,2)]; 
+						$reply = 'เราว่ากิน' . $food[$random] . 'มะ ' . $suffixfood[rand(0,2)]; 
 					}
 				}		
 				else {
