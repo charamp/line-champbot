@@ -41,8 +41,15 @@ if (!is_null($events['events'])) {
 					$reply = callApiChat($text[1]) . ' ' . $suffix[rand(0,1)];			
 				}
 
-				$replyToken = $event['source']['roomId'];
-				//$replyToken = $event['replyToken'];
+				if ($event['source']['type'] == 'user') {
+					$replyToken = $event['source']['userId'];
+				}
+				elif ($event['source']['type'] == 'room') {
+					$replyToken = $event['source']['roomId'];
+				}
+				elif ($event['source']['type'] == 'group') {
+					$replyToken = $event['source']['groupId'];
+				}
 				$myfile = fopen("bbb.txt", "a") or die("Unable to open file!");
                                 fwrite($myfile, (string) $replyToken);
                                 fclose($myfile);
