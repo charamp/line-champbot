@@ -1,5 +1,5 @@
 <?php
-include 'test.php'
+include 'test.php';
 
 $lineAccessToken = 'JVQbtOi6+PdQ10mDBPi61vGacBf9xdi5Vs2vFYOSH8EdhfP01Ptv8CgotQAQbrsxQjXMluidNILBhu4raGdqcF+ne16E8bT6JvOliwseoYw8vqGjhXTK+T4yDYckXOoEfFkFp5MoBgEf6muvlwHp4gdB04t89/1O/w1cDnyilFU=';
 // Make a POST Request to Messaging API to reply to sender
@@ -11,11 +11,6 @@ $replyToken = $lineTargetUID;
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 
-$myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
-fwrite($myfile, "WRITE");
-fclose($myfile);
-
-/*
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
@@ -29,7 +24,7 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-*/
+
 
 
 /*
