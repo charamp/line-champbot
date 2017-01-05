@@ -8,8 +8,8 @@ $lineTargetUID = "Re15307cef92d8a4e9fc5e566ed9bd140";
 
 $replyToken = $lineTargetUID;
 
-$food = Array('kfc', 'บอนชอน', 'พิซซ่า', 'แมค', 'สเต็ก', 'สเวนเซ่น', 'ไม่หิวอะ เลือกเลย', 'แล้วแต่อะ ป้ออยากกินไร')
-$suffixfood = ('เราอยากกิน', 'ถูกดี', 'ไม่ค่อยมีคนดี')
+$food = Array('kfc', 'บอนชอน', 'พิซซ่า', 'แมค', 'สเต็ก', 'สเวนเซ่น', 'ไม่หิวอะ เลือกเลย', 'แล้วแต่อะ ป้ออยากกินไร');
+$suffixfood = Array('เราอยากกิน', 'ถูกดี', 'ไม่ค่อยมีคนดี');
 
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
