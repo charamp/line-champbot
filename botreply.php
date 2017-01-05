@@ -44,10 +44,10 @@ if (!is_null($events['events'])) {
 				if ($event['source']['type'] == 'user') {
 					$replyToken = $event['source']['userId'];
 				}
-				elif ($event['source']['type'] == 'room') {
+				elseif ($event['source']['type'] == 'room') {
 					$replyToken = $event['source']['roomId'];
 				}
-				elif ($event['source']['type'] == 'group') {
+				elseif ($event['source']['type'] == 'group') {
 					$replyToken = $event['source']['groupId'];
 				}
 				$myfile = fopen("bbb.txt", "a") or die("Unable to open file!");
