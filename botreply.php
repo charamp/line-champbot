@@ -28,6 +28,7 @@ if (!is_null($events['events'])) {
                                 fwrite($myfile, (string) $text);
                                 fclose($myfile);
 			}
+		}
 	}
 }
 
