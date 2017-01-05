@@ -18,6 +18,7 @@ function callApiChat($message) {
 
 	echo $result;
 	var_dump($result);
+}
 
 callApiChat("สวัสดี");
 
