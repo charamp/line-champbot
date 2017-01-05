@@ -8,6 +8,9 @@ $lineTargetUID = "Re15307cef92d8a4e9fc5e566ed9bd140";
 
 $replyToken = $lineTargetUID;
 
+$food = Array('kfc', 'บอนชอน', 'พิซซ่า', 'แมค', 'สเต็ก', 'สเวนเซ่น', 'ไม่หิวอะ เลือกเลย', 'แล้วแต่อะ ป้ออยากกินไร')
+$suffixfood = ('เราอยากกิน', 'ถูกดี', 'ไม่ค่อยมีคนดี')
+
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 
@@ -24,7 +27,20 @@ if (!is_null($events['events'])) {
 				fclose($myfile);
 
 				$suffix = Array( str_repeat('5', rand(3,10)), str_repeat('อิ', rand(1,2)) );
-				$reply = callApiChat($text[1]) . ' ' . $suffix[rand(0,1)];			
+
+				if (strpos($text[1], 'กินไรดี') !== FALSE) {
+					$random = rand(0,7);
+					if ($random == 6 or $random == 7){
+						$reply = $food[random];
+					}
+					else {
+						$reply = 'เราว่ากิน' . $food[random] . 'มะ ' . $suffixfood[rand(0,2)]; 
+					}
+				}		
+				else {
+					$reply = callApiChat($text[1]) . ' ' . $suffix[rand(0,1)];			
+				}
+
 				$replyToken = $event['source']['roomId'];
 				//$replyToken = $event['replyToken'];
 				$myfile = fopen("bbb.txt", "a") or die("Unable to open file!");
