@@ -54,6 +54,10 @@ if (!is_null($events['events'])) {
                                 fwrite($myfile, (string) $replyToken);
                                 fclose($myfile);
 
+				if (strpos($reply, 'ควย') !== FALSE or strpos($reply, 'หี') !== FALSE ) {
+					$reply = 'เซ็นเซอร์';
+				}
+
 				$messages = [
             				'type' => 'text',
                      			'text' => $reply
