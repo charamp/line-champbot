@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			$text = explode(' ', $event['message']['text']);
 			if (in_array("แชมป์บอท", $text)) {
 				$myfile = fopen("aaa.txt", "a") or die("Unable to open file!");
-				fwrite($myfile, (string) $event);
+				fwrite($myfile, (string) json_encode($event));
 				fclose($myfile);
 
 				$suffix = Array( str_repeat('5', rand(3,10)), str_repeat('อิ', rand(1,2)) );
