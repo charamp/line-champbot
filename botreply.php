@@ -14,7 +14,14 @@ $suffixfood = Array('เราอยากกิน', 'ถูกดี', 'ไม
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 
+
+
 if (!is_null($events['events'])) {
+
+				$myfile = fopen("event.txt", "a") or die("Unable to open file!");
+				fwrite($myfile, (string) json_encode($events));
+				fclose($myfile);
+
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
