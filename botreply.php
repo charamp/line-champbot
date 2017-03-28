@@ -89,7 +89,7 @@ if (!is_null($events['events'])) {
 			        curl_close($ch);
 
                                 $myfile = fopen("ccc.txt", "a") or die("Unable to open file!");
-                                fwrite($myfile, json_encode($data);
+                                fwrite($myfile, json_encode($data));
                                 fclose($myfile);
 
 				fwrite($myfile,(string) $text.' '.date(DATE_RFC2822)."\n");
